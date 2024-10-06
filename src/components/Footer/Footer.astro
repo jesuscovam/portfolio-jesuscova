@@ -1,4 +1,5 @@
 ---
+import { config } from '../data/config';
 import Logo from '../Logo.astro';
 import SocialIcons from '../SocialIcons.astro';
 import './Footer.css';
@@ -6,21 +7,21 @@ import './Footer.css';
 
 <footer>
 	<div class="footer__container">
-		<Logo name="Jhon Doe" />
+    <Logo name={config.name} />
 		<SocialIcons width="23" height="23" />
 	</div>
 
 	<aside class="footer__links">
 		<ul>
 			<li>
-				<a class="footer__link" href="mailto:jhon.doe@gmail.com"
+        <a class="footer__link" href={`mailto:${config.email}`}
 					><span
 						><iconify-icon
 							icon="fluent:mail-28-regular"
 							width="27"
 							height="27"
 							style="color: #dcd8fc"></iconify-icon></span
-					>jhon.doe@gmail.com</a>
+          >{config.email}</a>
 			</li>
 			<li>
 				<a class="footer__link"
@@ -33,7 +34,7 @@ import './Footer.css';
 							width="27"
 							height="27"
 							style="color: #dcd8fc"></iconify-icon></span
-					>@JhonDoe</a>
+          >@{config.github}</a>
 			</li>
 		</ul>
 	</aside>

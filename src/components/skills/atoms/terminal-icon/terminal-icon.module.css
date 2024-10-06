@@ -9,6 +9,14 @@
 	width: min-content;
 	color: var(--icon-color);
 }
+.outline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: inherit;
+	width: min-content;
+}
 .icon {
 	font-size: 7rem;
 }

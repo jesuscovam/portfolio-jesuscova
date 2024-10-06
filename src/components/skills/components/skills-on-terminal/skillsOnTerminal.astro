@@ -2,34 +2,31 @@
 import TerminalIcon from '../../atoms/terminal-icon/TerminalIcon.astro';
 import Terminal from '../terminal/Terminal.astro';
 import './skills-on-terminal.css';
+
+const icons = [
+  { name: 'JavaScript', color: '#f7df1e', src: '/assets/javascript.svg'},
+  { name: 'TypeScript', color: '#3178c6', src: '/assets/typescript.svg'},
+  { name: 'NodeJS', color: '#32cd32', src: '/assets/nodejs.svg'},
+  { name: 'ReactNative', color: '#61dbfb', src: '/assets/reactnative.svg'},
+  { name: 'Svelte', color: '#ff3e00', src: '/assets/svelte.svg'},
+  { name: 'Tailwind', color: '#00d1ff', src:'/assets/tailwind.svg'},
+  { name: 'PostgreSQL', color: '#336791', src: '/assets/postgresql.svg'},
+  { name: 'Linux', color: '#77dd77', src: '/assets/linux.svg'},
+  { name: 'Nginx', color: '#32cd32', src: '/assets/nginx.svg'},
+  { name: 'Docker', color: '#00d1ff', src:'/assets/docker.svg'},
+  { name: 'Git', color: '#ffd1dc', src: '/assets/git.svg'},
+  { name: 'AWS', color: '#E9EC6B', src: '/assets/aws.svg'},
+  { name: 'Stripe', color: '#4D4DFF', src: '/assets/stripe.svg'},
+  { name: 'Twilio', color: '#FF6D6A', src: '/assets/twilio.svg'},
+]
 ---
 
-<Terminal nombre="jhonDoe">
+<Terminal nombre="jesusCova">
 	<div class="terminal__skills">
 		<h2>Mis habilidades</h2>
 		<div class="terminal__skills__container">
-			<TerminalIcon
-				src="/assets/bootstrap.svg"
-				color="#7738ff"
-				name="Bootstrap"
-			/>
-			<TerminalIcon
-				src="/assets/angular.svg"
-				color="#FF4747"
-				name="Angular"
-			/>
-			<TerminalIcon
-				src="/assets/react.svg"
-				color="#00D1FF"
-				name="React"
-			/>
-			<TerminalIcon src="/assets/bun.svg" color="#F3CBC2" name="Bun" />
-			<TerminalIcon src="/assets/css.svg" color="#00A3FF" name="CSS" />
-			<TerminalIcon
-				src="/assets/electron.svg"
-				color="#3F75FF"
-				name="Electron"
-			/>
+{icons.map(({src, color, name}) => <TerminalIcon src={src} color={color} name={name}/>)}
+
 		</div>
 	</div>
 </Terminal>

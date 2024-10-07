@@ -1,5 +1,5 @@
 export const config = {
-	name: 'Jesus Cova',
-	email: 'desarrollo@jesuscova.com',
-	github: 'jesuscovam',
+  name: 'Jesus Cova',
+  email: 'dev@jesuscova.com',
+  github: 'jesuscovam',
 };
